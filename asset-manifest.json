@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/superstar-repos/static/css/main.427b6e75.chunk.css",
+    "main.js": "/superstar-repos/static/js/main.85ea24e5.chunk.js",
+    "main.js.map": "/superstar-repos/static/js/main.85ea24e5.chunk.js.map",
+    "runtime-main.js": "/superstar-repos/static/js/runtime-main.cae51d0f.js",
+    "runtime-main.js.map": "/superstar-repos/static/js/runtime-main.cae51d0f.js.map",
+    "static/js/2.c31a8d2f.chunk.js": "/superstar-repos/static/js/2.c31a8d2f.chunk.js",
+    "static/js/2.c31a8d2f.chunk.js.map": "/superstar-repos/static/js/2.c31a8d2f.chunk.js.map",
+    "index.html": "/superstar-repos/index.html",
+    "static/css/main.427b6e75.chunk.css.map": "/superstar-repos/static/css/main.427b6e75.chunk.css.map",
+    "static/js/2.c31a8d2f.chunk.js.LICENSE.txt": "/superstar-repos/static/js/2.c31a8d2f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cae51d0f.js",
+    "static/js/2.c31a8d2f.chunk.js",
+    "static/css/main.427b6e75.chunk.css",
+    "static/js/main.85ea24e5.chunk.js"
+  ]
+}
