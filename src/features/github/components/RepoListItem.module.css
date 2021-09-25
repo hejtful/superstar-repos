@@ -1,0 +1,61 @@
+.wrapper {
+  border-bottom: 1px solid rgb(48, 54, 61);
+  padding: 16px;
+}
+
+.titleWrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+}
+
+.link {
+  color: rgb(88, 166, 255);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.button {
+  background-color: rgb(33, 38, 45);
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  border-radius: 6px;
+  color: rgb(201, 209, 217);
+  cursor: pointer;
+}
+
+.button:focus {
+  border-color: rgb(139, 148, 158);
+}
+
+.button:hover {
+  background-color: rgb(48, 54, 61);
+  border-color: rgb(139, 148, 158);
+}
+
+.button:active {
+  background-color: rgb(40, 46, 51);
+  border-color: rgb(110, 118, 129);
+}
+
+.repoName {
+  font-weight: bold;
+}
+
+.description {
+  color: rgb(139, 148, 158);
+  font-size: 14px;
+  margin: 4px 0;
+  width: 75%;
+}
+
+.details {
+  color: rgb(139, 148, 158);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-top: 8px;
+}

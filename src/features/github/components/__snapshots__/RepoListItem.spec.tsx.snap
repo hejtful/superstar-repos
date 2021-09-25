@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly when not starred 1`] = `
+<DocumentFragment>
+  <article
+    class="wrapper"
+    data-testid="repo-list-item"
+  >
+    <div
+      class="titleWrapper"
+    >
+      <h1
+        class="title"
+      >
+        <a
+          class="link"
+          href="https://github.com/smartvotedocs/votesmart2021"
+        >
+          smartvotedocs
+          <span
+            class="repoName"
+          >
+             / votesmart2021
+          </span>
+        </a>
+      </h1>
+      <button
+        class="button"
+        type="button"
+      >
+        Star
+      </button>
+    </div>
+    <p
+      class="description"
+    >
+      Кандидаты Умного голосования в Госдуму 2021
+    </p>
+    <div
+      class="details"
+    >
+      <span>
+        Language: Unknown
+      </span>
+      <span>
+        Stars: 1342
+      </span>
+    </div>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`should render properly when starred 1`] = `
+<DocumentFragment>
+  <article
+    class="wrapper"
+    data-testid="repo-list-item"
+  >
+    <div
+      class="titleWrapper"
+    >
+      <h1
+        class="title"
+      >
+        <a
+          class="link"
+          href="https://github.com/phoboslab/q1k3"
+        >
+          phoboslab
+          <span
+            class="repoName"
+          >
+             / q1k3
+          </span>
+        </a>
+      </h1>
+      <button
+        class="button"
+        type="button"
+      >
+        Un-star
+      </button>
+    </div>
+    <p
+      class="description"
+    >
+      A tiny FPS for js13k
+    </p>
+    <div
+      class="details"
+    >
+      <span>
+        Language: JavaScript
+      </span>
+      <span>
+        Stars: 1053
+      </span>
+    </div>
+  </article>
+</DocumentFragment>
+`;
