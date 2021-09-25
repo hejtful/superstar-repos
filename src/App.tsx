@@ -1,7 +1,7 @@
+import { Github } from './features/github/Github';
+
 function App() {
-  return (
-    <div></div>
-  );
+  return <Github />;
 }
 
 export default App;
