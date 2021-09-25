@@ -1,10 +1,17 @@
 import { rest } from 'msw';
 import { mockRepositories } from '../mocks/github/repositories';
+import { mockRepositoriesFilteredByLanguage } from '../mocks/github/repositoriesFilteredByLanguage';
 
 const handlers = [
-  rest.get('https://api.github.com/search/repositories', (_, res, ctx) => {
+  rest.get('https://api.github.com/search/repositories', (req, res, ctx) => {
+    const hasLanguageFilter = req.url.searchParams
+      .get('q')
+      ?.includes('language');
+
     const mockApiResponse = {
-      items: mockRepositories,
+      items: hasLanguageFilter
+        ? mockRepositoriesFilteredByLanguage
+        : mockRepositories,
     };
 
     return res(ctx.json(mockApiResponse));

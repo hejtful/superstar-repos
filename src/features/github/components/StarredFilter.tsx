@@ -9,7 +9,7 @@ interface Props {
 
 export function StarredFilter({ value, onChange }: Props) {
   return (
-    <label className={styles.switch}>
+    <label className={styles.switch} data-testid="starred-filter">
       <span className={styles.labelText}>Starred:</span>
       <input
         type="checkbox"

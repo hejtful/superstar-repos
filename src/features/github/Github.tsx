@@ -79,7 +79,10 @@ export function Github() {
               ))
             ) : allRepos?.length ? (
               // No starred repos message
-              <div className={styles.statusMessage}>
+              <div
+                className={styles.statusMessage}
+                data-testid="no-starred-repos-message"
+              >
                 You did not star any of the top {languagesPerPage} {language}{' '}
                 repos.
               </div>

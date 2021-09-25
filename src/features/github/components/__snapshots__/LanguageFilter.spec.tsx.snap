@@ -9,6 +9,7 @@ exports[`should render properly 1`] = `
     Language:
     <select
       class="select"
+      data-testid="language-filter"
       id="language-filter"
     >
       <option>

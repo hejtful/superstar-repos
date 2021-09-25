@@ -16,6 +16,7 @@ export function LanguageFilter({ onChange }: Props) {
         id="language-filter"
         className={styles.select}
         onChange={onChange}
+        data-testid="language-filter"
       >
         <option>Any</option>
         {languages.map((language) => (

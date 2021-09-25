@@ -20,8 +20,8 @@ export function RepoListItem({
       <div className={styles.titleWrapper}>
         <h1 className={styles.title}>
           <a href={repo.html_url} className={styles.link}>
-            {repo.owner.login}
-            <span className={styles.repoName}> / {repo.name}</span>
+            {repo.owner.login} /
+            <span className={styles.repoName}> {repo.name}</span>
           </a>
         </h1>
 
@@ -30,6 +30,7 @@ export function RepoListItem({
             className={styles.button}
             type="button"
             onClick={onUnStarButtonClick}
+            data-testid="un-star-button"
           >
             Un-star
           </button>
@@ -38,6 +39,7 @@ export function RepoListItem({
             className={styles.button}
             type="button"
             onClick={onStarButtonClick}
+            data-testid="star-button"
           >
             Star
           </button>

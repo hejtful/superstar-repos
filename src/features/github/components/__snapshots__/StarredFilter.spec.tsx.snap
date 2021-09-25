@@ -4,6 +4,7 @@ exports[`should render properly 1`] = `
 <DocumentFragment>
   <label
     class="switch"
+    data-testid="starred-filter"
   >
     <span
       class="labelText"

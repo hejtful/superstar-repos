@@ -16,16 +16,17 @@ exports[`should render properly when not starred 1`] = `
           class="link"
           href="https://github.com/smartvotedocs/votesmart2021"
         >
-          smartvotedocs
+          smartvotedocs /
           <span
             class="repoName"
           >
-             / votesmart2021
+             votesmart2021
           </span>
         </a>
       </h1>
       <button
         class="button"
+        data-testid="star-button"
         type="button"
       >
         Star
@@ -66,16 +67,17 @@ exports[`should render properly when starred 1`] = `
           class="link"
           href="https://github.com/phoboslab/q1k3"
         >
-          phoboslab
+          phoboslab /
           <span
             class="repoName"
           >
-             / q1k3
+             q1k3
           </span>
         </a>
       </h1>
       <button
         class="button"
+        data-testid="un-star-button"
         type="button"
       >
         Un-star
