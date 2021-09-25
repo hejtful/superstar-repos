@@ -1,8 +1,11 @@
 import { useState } from 'react';
 
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { getLastWeekQueryString } from '../../app/util';
+import { selectStarredReposIds, starRepo, unStarRepo } from './githubSlice';
 import { useGetReposQuery } from './githubApi';
-import { LanguageFilter, RepoListItem } from './components/';
+import { languagesPerPage } from './constants';
+import { LanguageFilter, StarredFilter, RepoListItem } from './components/';
 
 import styles from './Github.module.css';
 
@@ -14,11 +17,18 @@ export const loadingMessage = 'Loading...';
 
 export function Github() {
   const [language, setLanguage] = useState<string | null>(null);
+  const [isStarredFilterActive, setIsStarredFilterActive] = useState(false);
   const {
-    data: repos,
+    data: allRepos,
     error,
     isLoading,
   } = useGetReposQuery({ created, language });
+  const starredReposIds = useAppSelector(selectStarredReposIds);
+  const dispatch = useAppDispatch();
+
+  const repos = isStarredFilterActive
+    ? allRepos?.filter((repo) => starredReposIds?.includes(repo.id))
+    : allRepos;
 
   return (
     <main className={styles.main}>
@@ -38,6 +48,15 @@ export function Github() {
                 setLanguage((event.target as HTMLSelectElement).value)
               }
             />
+
+            <StarredFilter
+              value={isStarredFilterActive}
+              onChange={(event) =>
+                setIsStarredFilterActive(
+                  (event.target as HTMLInputElement).checked
+                )
+              }
+            />
           </div>
 
           <div>
@@ -53,11 +72,17 @@ export function Github() {
                 <RepoListItem
                   key={repo.id}
                   repo={repo}
-                  isStarred={false}
-                  onStarButtonClick={() => ({})}
-                  onUnStarButtonClick={() => ({})}
+                  isStarred={starredReposIds?.includes(repo.id)}
+                  onStarButtonClick={() => dispatch(starRepo(repo.id))}
+                  onUnStarButtonClick={() => dispatch(unStarRepo(repo.id))}
                 />
               ))
+            ) : allRepos?.length ? (
+              // No starred repos message
+              <div className={styles.statusMessage}>
+                You did not star any of the top {languagesPerPage} {language}{' '}
+                repos.
+              </div>
             ) : null}
           </div>
         </div>

@@ -4,10 +4,11 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 import { setupStore } from './app/store';
+import { hydrateStore } from './app/middleware/localStorageMiddleware';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const store = setupStore();
+const store = setupStore(hydrateStore());
 
 ReactDOM.render(
   <React.StrictMode>

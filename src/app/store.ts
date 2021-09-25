@@ -1,9 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import type { PreloadedState } from '@reduxjs/toolkit';
 
+import { localStorageMiddleware } from './middleware/localStorageMiddleware';
+import githubReducer from '../features/github/githubSlice';
 import { githubApi } from '../features/github/githubApi';
 
 const rootReducer = combineReducers({
+  github: githubReducer,
   [githubApi.reducerPath]: githubApi.reducer,
 });
 
@@ -12,7 +15,9 @@ export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
     reducer: rootReducer,
     preloadedState,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(githubApi.middleware),
+      getDefaultMiddleware()
+        .concat(localStorageMiddleware)
+        .concat(githubApi.middleware),
   });
 };
 
