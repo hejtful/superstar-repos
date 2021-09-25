@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+<DocumentFragment>
+  <label
+    class="switch"
+  >
+    <span
+      class="labelText"
+    >
+      Starred:
+    </span>
+    <input
+      class="input"
+      type="checkbox"
+    />
+    <span
+      class="slider"
+    />
+  </label>
+</DocumentFragment>
+`;
