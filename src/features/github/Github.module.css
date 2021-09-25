@@ -1,0 +1,51 @@
+.main {
+  height: 100%;
+}
+
+.banner {
+  background-color: rgb(22, 27, 34);
+  border-bottom: 1px solid rgb(48, 54, 61);
+  padding: 40px;
+  text-align: center;
+}
+
+.bannerTitle {
+  color: rgb(201, 209, 217);
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bannerDescription {
+  color: rgb(139, 148, 158);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.container {
+  background-color: rgb(13, 17, 23);
+  padding: 20px;
+}
+
+.wrapper {
+  background-color: rgb(13, 17, 23);
+  border: 1px solid rgb(48, 54, 61);
+  border-radius: 6px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.actions {
+  background-color: rgb(22, 27, 34);
+  border-bottom: 1px solid rgb(48, 54, 61);
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.statusMessage {
+  padding: 16px;
+  color: rgb(139, 148, 158);
+}

@@ -27,7 +27,7 @@ export interface Repository {
   private: boolean;
   owner: Owner;
   html_url: string;
-  description: string;
+  description: string | null;
   fork: boolean;
   url: string;
   forks_url: string;
@@ -77,7 +77,7 @@ export interface Repository {
   size: number;
   stargazers_count: number;
   watchers_count: number;
-  language: string;
+  language: string | null;
   has_issues: boolean;
   has_projects: boolean;
   has_downloads: boolean;
